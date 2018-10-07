@@ -33,7 +33,8 @@
             this.btnHighscore = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnPractice = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.rbEnglish = new System.Windows.Forms.RadioButton();
+            this.rbCroatian = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
@@ -90,21 +91,37 @@
             this.btnPractice.UseVisualStyleBackColor = true;
             this.btnPractice.Click += new System.EventHandler(this.btnPractice_Click);
             // 
-            // label2
+            // rbEnglish
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(240, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "ENG / HRV";
+            this.rbEnglish.AutoSize = true;
+            this.rbEnglish.Location = new System.Drawing.Point(243, 104);
+            this.rbEnglish.Name = "rbEnglish";
+            this.rbEnglish.Size = new System.Drawing.Size(59, 17);
+            this.rbEnglish.TabIndex = 6;
+            this.rbEnglish.TabStop = true;
+            this.rbEnglish.Text = "English";
+            this.rbEnglish.UseVisualStyleBackColor = true;
+            this.rbEnglish.CheckedChanged += new System.EventHandler(this.rbEnglish_CheckedChanged);
+            // 
+            // rbCroatian
+            // 
+            this.rbCroatian.AutoSize = true;
+            this.rbCroatian.Location = new System.Drawing.Point(243, 127);
+            this.rbCroatian.Name = "rbCroatian";
+            this.rbCroatian.Size = new System.Drawing.Size(64, 17);
+            this.rbCroatian.TabIndex = 7;
+            this.rbCroatian.TabStop = true;
+            this.rbCroatian.Text = "Croatian";
+            this.rbCroatian.UseVisualStyleBackColor = true;
+            this.rbCroatian.CheckedChanged += new System.EventHandler(this.rbCroatian_CheckedChanged);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(316, 398);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(341, 398);
+            this.Controls.Add(this.rbCroatian);
+            this.Controls.Add(this.rbEnglish);
             this.Controls.Add(this.btnPractice);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnHighscore);
@@ -112,6 +129,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Main";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,7 +142,8 @@
         private System.Windows.Forms.Button btnHighscore;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnPractice;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RadioButton rbEnglish;
+        private System.Windows.Forms.RadioButton rbCroatian;
     }
 }
 

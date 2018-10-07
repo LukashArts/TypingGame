@@ -25,6 +25,11 @@ namespace Typing_game
 
         private string choosenDifficulty = null;
 
+        public frmStart(bool hrvatski)
+        {
+            MessageBox.Show("odabran je hrvatski jezik!");
+        }
+
         /// <summary>
         /// Odnosi se na practice i određivanju koju će težinu riječi koristiti.
         /// </summary>
@@ -41,6 +46,7 @@ namespace Typing_game
 
             else if(choosenDifficulty == "medium")
             {
+
             }
 
             else if(choosenDifficulty == "hard")
