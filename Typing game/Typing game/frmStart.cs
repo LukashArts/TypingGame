@@ -25,9 +25,23 @@ namespace Typing_game
 
         private string choosenDifficulty = null;
 
+        private bool hrvat;
+
         public frmStart(bool hrvatski)
         {
-            MessageBox.Show("odabran je hrvatski jezik!");
+            hrvat = hrvatski;
+
+            //hrvatske riječi, tu nešt ne valja - mora se složit dll za hrv riječi, inače ne radi.
+            randomWords = new List<string>();
+            randomWords.Add("avion");
+            randomWords.Add("palma");
+            
+            InitializeComponent();
+
+            lbTimeName.Text = "Vrijeme:";
+            lbWordName.Text = "Riječi:";
+            lbChName.Text = "Slova:";
+            btnRestart.Name = "Ponovi";
         }
 
         /// <summary>
@@ -70,21 +84,21 @@ namespace Typing_game
 
             if(choosenDifficulty == "easy")
             {
-                label2.Hide();
+                lbTimeName.Hide();
                 lbSeconds.Text = "Difficulty: EASY";
                 lbSeconds.Location = new Point(200, 35);
                 lbSeconds.Font = new Font(lbSeconds.Font.FontFamily, 12);
             }
             else if(choosenDifficulty == "medium")
             {
-                label2.Hide();
+                lbTimeName.Hide();
                 lbSeconds.Text = "Difficulty: MEDIUM";
                 lbSeconds.Location = new Point(200, 35);
                 lbSeconds.Font = new Font(lbSeconds.Font.FontFamily, 12);
             }
             else if (choosenDifficulty == "hard")
             {
-                label2.Hide();
+                lbTimeName.Hide();
                 lbSeconds.Text = "Difficulty: HARD";
                 lbSeconds.Location = new Point(200, 35);
                 lbSeconds.Font = new Font(lbSeconds.Font.FontFamily, 12);

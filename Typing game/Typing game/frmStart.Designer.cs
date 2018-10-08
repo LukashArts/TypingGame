@@ -32,12 +32,12 @@
             this.txtWords = new System.Windows.Forms.TextBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.lbSeconds = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbTimeName = new System.Windows.Forms.Label();
             this.txtWrite = new System.Windows.Forms.TextBox();
             this.lbWords = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbWordName = new System.Windows.Forms.Label();
             this.btnRestart = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbChName = new System.Windows.Forms.Label();
             this.lbCharacters = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -65,14 +65,14 @@
             this.lbSeconds.Text = "00.0";
             this.lbSeconds.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // lbTimeName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(217, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Time:";
+            this.lbTimeName.AutoSize = true;
+            this.lbTimeName.Location = new System.Drawing.Point(217, 38);
+            this.lbTimeName.Name = "lbTimeName";
+            this.lbTimeName.Size = new System.Drawing.Size(33, 13);
+            this.lbTimeName.TabIndex = 6;
+            this.lbTimeName.Text = "Time:";
             // 
             // txtWrite
             // 
@@ -94,14 +94,14 @@
             this.lbWords.Text = "0";
             this.lbWords.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // lbWordName
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(209, 82);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Words:";
+            this.lbWordName.AutoSize = true;
+            this.lbWordName.Location = new System.Drawing.Point(209, 82);
+            this.lbWordName.Name = "lbWordName";
+            this.lbWordName.Size = new System.Drawing.Size(41, 13);
+            this.lbWordName.TabIndex = 9;
+            this.lbWordName.Text = "Words:";
             // 
             // btnRestart
             // 
@@ -113,14 +113,14 @@
             this.btnRestart.UseVisualStyleBackColor = true;
             this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
             // 
-            // label4
+            // lbChName
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(189, 124);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 13);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Characters:";
+            this.lbChName.AutoSize = true;
+            this.lbChName.Location = new System.Drawing.Point(189, 124);
+            this.lbChName.Name = "lbChName";
+            this.lbChName.Size = new System.Drawing.Size(61, 13);
+            this.lbChName.TabIndex = 11;
+            this.lbChName.Text = "Characters:";
             // 
             // lbCharacters
             // 
@@ -139,12 +139,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(413, 321);
             this.Controls.Add(this.lbCharacters);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbChName);
             this.Controls.Add(this.btnRestart);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbWordName);
             this.Controls.Add(this.lbWords);
             this.Controls.Add(this.txtWrite);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbTimeName);
             this.Controls.Add(this.lbSeconds);
             this.Controls.Add(this.txtWords);
             this.Name = "frmStart";
@@ -160,12 +160,12 @@
         private System.Windows.Forms.TextBox txtWords;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label lbSeconds;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbTimeName;
         private System.Windows.Forms.TextBox txtWrite;
         private System.Windows.Forms.Label lbWords;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbWordName;
         private System.Windows.Forms.Button btnRestart;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbChName;
         private System.Windows.Forms.Label lbCharacters;
     }
 }
