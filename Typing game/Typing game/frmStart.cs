@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClassLibrary1;
 using EasyWords;
+using hrvrijeci;
 
 namespace Typing_game
 {
@@ -31,17 +32,15 @@ namespace Typing_game
         {
             hrvat = hrvatski;
 
-            //hrvatske riječi, tu nešt ne valja - mora se složit dll za hrv riječi, inače ne radi.
-            randomWords = new List<string>();
-            randomWords.Add("avion");
-            randomWords.Add("palma");
+            hrvrijeci.Class1 words = new hrvrijeci.Class1();
+            randomWords = words.GetWordList();
             
             InitializeComponent();
 
             lbTimeName.Text = "Vrijeme:";
             lbWordName.Text = "Riječi:";
             lbChName.Text = "Slova:";
-            btnRestart.Name = "Ponovi";
+            btnRestart.Text = "Ponovi";
         }
 
         /// <summary>

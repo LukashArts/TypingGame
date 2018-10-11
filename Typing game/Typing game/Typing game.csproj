@@ -53,6 +53,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Hard.dll</HintPath>
     </Reference>
+    <Reference Include="hrvrijeci, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\hrvrijeci.dll</HintPath>
+    </Reference>
     <Reference Include="SQL, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\SQL.1.0.0.1\lib\net40\SQL.dll</HintPath>
     </Reference>
