@@ -16,6 +16,9 @@ namespace Typing_game
 {
     public partial class frmStart : Form
     {        
+        /// <summary>
+        /// Ako je po defaultu odabran engleski jezik, tada se izvršava sljedeći konstruktor.
+        /// </summary>
         public frmStart()
         {
             ClassLibrary1.Class1 words = new ClassLibrary1.Class1();
@@ -28,6 +31,10 @@ namespace Typing_game
 
         private bool hrvat;
 
+        /// <summary>
+        /// Ako je odabran hrvatski jezik izvršava se sljedeći konstruktor.
+        /// </summary>
+        /// <param name="hrvatski">Odabrani jezik.</param>
         public frmStart(bool hrvatski)
         {
             hrvat = hrvatski;
@@ -72,7 +79,6 @@ namespace Typing_game
         }
 
         List<string> randomWords = null;
-        Stopwatch stopwatch = new Stopwatch();
 
         /// <summary>
         /// Pokreće se prilikom otvaranja forme.
@@ -131,17 +137,24 @@ namespace Typing_game
                 }
             }            
         }
-
+        
+        Stopwatch stopwatch = new Stopwatch();
+        bool check = false;
         /// <summary>
-        /// Timer koji broji svaku stotinku.
+        /// Izvršavanje štoperice.
         /// </summary>
         private void timer_Tick(object sender, EventArgs e)
         {                          
             lbSeconds.Text = stopwatch.Elapsed.ToString("ss\\.f");
             if (stopwatch.Elapsed.Minutes >= 1)
-            {                
-                stopwatch.Stop();
-                txtWrite.Enabled = false;
+            {
+                lbSeconds.Text = stopwatch.Elapsed.ToString("m\\:ss\\.f");
+                if (check == true || string.IsNullOrWhiteSpace(txtWrite.Text))
+                {
+                    stopwatch.Stop();
+                    txtWrite.Enabled = false;
+                    Calculating();
+                }
             }         
         }
 
@@ -161,7 +174,12 @@ namespace Typing_game
                 correctWords = correctWords + 1;
                 PrintOutSpeed();
 
+                check = true;
                 btnRestart.Enabled = true;
+            }
+            else
+            {
+                check = false;
             }
         }
 
@@ -221,6 +239,22 @@ namespace Typing_game
             {
                 btnRestart.PerformClick();
             }
+        }
+
+        /// <summary>
+        /// Izračunava WPM i CPM.
+        /// </summary>
+        private void Calculating()
+        {
+            double time = stopwatch.Elapsed.TotalMinutes;
+            int minutes = stopwatch.Elapsed.Minutes;
+
+            double CPM = (minutes / time) * sizeOfWords;
+
+            double WPM = CPM / 5;
+
+            textBox1.Text = CPM.ToString();
+            textBox2.Text = WPM.ToString();
         }
     }
 }

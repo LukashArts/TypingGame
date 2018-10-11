@@ -39,6 +39,8 @@
             this.btnRestart = new System.Windows.Forms.Button();
             this.lbChName = new System.Windows.Forms.Label();
             this.lbCharacters = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtWords
@@ -133,11 +135,27 @@
             this.lbCharacters.Text = "0";
             this.lbCharacters.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(92, 216);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 13;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(92, 242);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 14;
+            // 
             // frmStart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(413, 321);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lbCharacters);
             this.Controls.Add(this.lbChName);
             this.Controls.Add(this.btnRestart);
@@ -167,5 +185,7 @@
         private System.Windows.Forms.Button btnRestart;
         private System.Windows.Forms.Label lbChName;
         private System.Windows.Forms.Label lbCharacters;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
