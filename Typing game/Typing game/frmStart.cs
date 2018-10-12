@@ -113,13 +113,15 @@ namespace Typing_game
 
         int number = 0;
         int numbers = 0;
-        List<string> allWords = new List<string>();
+        List<string> allWords = null;
         /// <summary>
         /// Puni textbox sa slučajnim riječima.
         /// </summary>
         private void RandomWords()
         {
             Random rand = new Random();
+            allWords = new List<string>();
+
             for (int j = 0; j < 200; j++)
             {                
                 number = rand.Next(randomWords.Count);
@@ -222,6 +224,8 @@ namespace Typing_game
         /// </summary>
         private void btnRestart_Click(object sender, EventArgs e)
         {
+            i = 0;
+
             txtWrite.Clear();
             txtWrite.Enabled = true;
             txtWrite.Focus();
@@ -233,7 +237,7 @@ namespace Typing_game
             stopwatch.Stop();
             stopwatch.Reset();
 
-            RandomWords();            
+            RandomWords();      
         }
 
         /// <summary>
