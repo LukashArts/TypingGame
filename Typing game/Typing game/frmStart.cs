@@ -84,7 +84,7 @@ namespace Typing_game
         /// Pokreće se prilikom otvaranja forme.
         /// </summary>
         private void frmStart_Load(object sender, EventArgs e)
-        {            
+        {
             RandomWords();
 
             if(choosenDifficulty == "easy")
@@ -112,32 +112,41 @@ namespace Typing_game
 
         int number = 0;
         int numbers = 0;
+        List<string> allWords = new List<string>();
+        //List<string> listAllWords = new List<string>();
         /// <summary>
         /// Puni textbox sa slučajnim riječima.
         /// </summary>
         private void RandomWords()
         {
             Random rand = new Random();
-            number = rand.Next(randomWords.Count);
+            for (int j = 0; j < 200; j++)
+            {                
+                number = rand.Next(randomWords.Count);
 
-            if (numbers == number)
-            {
-                // provjera da ne bi došla ista riječ
-                RandomWords();
-            }
-            else
-            {
-                for (int i = 0; i < randomWords.Count; i++)
+                if (numbers == number)
                 {
-                    if (i == number)
+                    // provjera da ne bi došla ista riječ
+                    RandomWords();
+                }
+                else
+                {
+                    for (int i = 0; i < randomWords.Count; i++)
                     {
-                        txtWords.Text = randomWords[i];
-                        numbers = number;
+                        if (i == number)
+                        {
+                            allWords.Add(randomWords[i]);
+                            numbers = number;
+                        }
                     }
                 }
-            }            
+            }
+
+            txtWords.Text = allWords[0];
+            txtNextWord1.Text = allWords[1];
+            txtNextWord2.Text = allWords[2];
         }
-        
+
         Stopwatch stopwatch = new Stopwatch();
         bool check = false;
         /// <summary>
@@ -160,16 +169,22 @@ namespace Typing_game
 
         int sizeOfWords = 0;
         int correctWords = 0;
+        int i = 0;
         /// <summary>
         /// Provjerava ispravnost unesenog teksta i prelazi na novi.
         /// </summary>
         private void txtWrite_TextChanged(object sender, EventArgs e)
-        {
+        {     
             if(txtWrite.Text == txtWords.Text)
             {
                 sizeOfWords = sizeOfWords + txtWords.TextLength;
+                
+                txtWords.Text = allWords[i + 1];
+                txtNextWord1.Text = allWords[i + 2];
+                txtNextWord2.Text = allWords[i + 3];
 
-                RandomWords();
+                i++;
+
                 txtWrite.Clear();
                 correctWords = correctWords + 1;
                 PrintOutSpeed();
@@ -246,12 +261,22 @@ namespace Typing_game
         /// </summary>
         private void Calculating()
         {
+            double CPM;
+            double WPM;
+
             double time = stopwatch.Elapsed.TotalMinutes;
             int minutes = stopwatch.Elapsed.Minutes;
 
-            double CPM = (minutes / time) * sizeOfWords;
+            if(lbSeconds.Text == "1:00.0")
+            {
+                CPM = minutes * sizeOfWords;
+            }
+            else
+            {
+                CPM = (minutes / time) * sizeOfWords;                
+            }
 
-            double WPM = CPM / 5;
+            WPM = CPM / 5;
 
             textBox1.Text = CPM.ToString();
             textBox2.Text = WPM.ToString();

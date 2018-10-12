@@ -41,6 +41,8 @@
             this.lbCharacters = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNextWord1 = new System.Windows.Forms.TextBox();
+            this.txtNextWord2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtWords
@@ -78,7 +80,7 @@
             // 
             // txtWrite
             // 
-            this.txtWrite.Location = new System.Drawing.Point(49, 82);
+            this.txtWrite.Location = new System.Drawing.Point(49, 131);
             this.txtWrite.Name = "txtWrite";
             this.txtWrite.Size = new System.Drawing.Size(100, 20);
             this.txtWrite.TabIndex = 0;
@@ -149,11 +151,29 @@
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 14;
             // 
+            // txtNextWord1
+            // 
+            this.txtNextWord1.Location = new System.Drawing.Point(49, 60);
+            this.txtNextWord1.Name = "txtNextWord1";
+            this.txtNextWord1.ReadOnly = true;
+            this.txtNextWord1.Size = new System.Drawing.Size(100, 20);
+            this.txtNextWord1.TabIndex = 15;
+            // 
+            // txtNextWord2
+            // 
+            this.txtNextWord2.Location = new System.Drawing.Point(49, 86);
+            this.txtNextWord2.Name = "txtNextWord2";
+            this.txtNextWord2.ReadOnly = true;
+            this.txtNextWord2.Size = new System.Drawing.Size(100, 20);
+            this.txtNextWord2.TabIndex = 16;
+            // 
             // frmStart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(413, 321);
+            this.Controls.Add(this.txtNextWord2);
+            this.Controls.Add(this.txtNextWord1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lbCharacters);
@@ -187,5 +207,7 @@
         private System.Windows.Forms.Label lbCharacters;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNextWord1;
+        private System.Windows.Forms.TextBox txtNextWord2;
     }
 }
