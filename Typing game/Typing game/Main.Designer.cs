@@ -33,8 +33,8 @@
             this.btnHighscore = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnPractice = new System.Windows.Forms.Button();
-            this.rbEnglish = new System.Windows.Forms.RadioButton();
-            this.rbCroatian = new System.Windows.Forms.RadioButton();
+            this.btnCroatian = new System.Windows.Forms.Button();
+            this.btnEnglish = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -91,42 +91,46 @@
             this.btnPractice.UseVisualStyleBackColor = true;
             this.btnPractice.Click += new System.EventHandler(this.btnPractice_Click);
             // 
-            // rbEnglish
+            // btnCroatian
             // 
-            this.rbEnglish.AutoSize = true;
-            this.rbEnglish.Location = new System.Drawing.Point(243, 104);
-            this.rbEnglish.Name = "rbEnglish";
-            this.rbEnglish.Size = new System.Drawing.Size(59, 17);
-            this.rbEnglish.TabIndex = 6;
-            this.rbEnglish.TabStop = true;
-            this.rbEnglish.Text = "English";
-            this.rbEnglish.UseVisualStyleBackColor = true;
-            this.rbEnglish.CheckedChanged += new System.EventHandler(this.rbEnglish_CheckedChanged);
+            this.btnCroatian.BackColor = System.Drawing.Color.Transparent;
+            this.btnCroatian.BackgroundImage = global::Typing_game.Properties.Resources.Croatian_flag;
+            this.btnCroatian.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCroatian.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCroatian.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCroatian.Location = new System.Drawing.Point(107, 79);
+            this.btnCroatian.Name = "btnCroatian";
+            this.btnCroatian.Size = new System.Drawing.Size(41, 25);
+            this.btnCroatian.TabIndex = 8;
+            this.btnCroatian.UseVisualStyleBackColor = false;
+            this.btnCroatian.Click += new System.EventHandler(this.btnCroatian_Click);
             // 
-            // rbCroatian
+            // btnEnglish
             // 
-            this.rbCroatian.AutoSize = true;
-            this.rbCroatian.Location = new System.Drawing.Point(243, 127);
-            this.rbCroatian.Name = "rbCroatian";
-            this.rbCroatian.Size = new System.Drawing.Size(64, 17);
-            this.rbCroatian.TabIndex = 7;
-            this.rbCroatian.TabStop = true;
-            this.rbCroatian.Text = "Croatian";
-            this.rbCroatian.UseVisualStyleBackColor = true;
-            this.rbCroatian.CheckedChanged += new System.EventHandler(this.rbCroatian_CheckedChanged);
+            this.btnEnglish.BackColor = System.Drawing.Color.Transparent;
+            this.btnEnglish.BackgroundImage = global::Typing_game.Properties.Resources.Britain_flag;
+            this.btnEnglish.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEnglish.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEnglish.ForeColor = System.Drawing.Color.Transparent;
+            this.btnEnglish.Location = new System.Drawing.Point(154, 79);
+            this.btnEnglish.Name = "btnEnglish";
+            this.btnEnglish.Size = new System.Drawing.Size(41, 25);
+            this.btnEnglish.TabIndex = 9;
+            this.btnEnglish.UseVisualStyleBackColor = false;
+            this.btnEnglish.Click += new System.EventHandler(this.btnEnglish_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(341, 398);
-            this.Controls.Add(this.rbCroatian);
-            this.Controls.Add(this.rbEnglish);
+            this.ClientSize = new System.Drawing.Size(306, 398);
+            this.Controls.Add(this.btnEnglish);
             this.Controls.Add(this.btnPractice);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnHighscore);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnCroatian);
             this.Name = "Main";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Main_Load);
@@ -142,8 +146,8 @@
         private System.Windows.Forms.Button btnHighscore;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnPractice;
-        private System.Windows.Forms.RadioButton rbEnglish;
-        private System.Windows.Forms.RadioButton rbCroatian;
+        private System.Windows.Forms.Button btnCroatian;
+        private System.Windows.Forms.Button btnEnglish;
     }
 }
 

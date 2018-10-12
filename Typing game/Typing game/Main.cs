@@ -22,7 +22,7 @@ namespace Typing_game
         /// </summary>
         private void btnStart_Click(object sender, EventArgs e)
         {
-            if (rbEnglish.Checked)
+            if (english)
             {
                 frmStart start = new frmStart();
                 start.ShowDialog();
@@ -61,22 +61,22 @@ namespace Typing_game
             practice.ShowDialog();
         }
 
+        bool english = false;
         /// <summary>
-        /// Mijenja jezik na engleski (default).
+        /// Izvršava se tijekom otvaranja aplikacije odnosno forme.
         /// </summary>
-        private void rbEnglish_CheckedChanged(object sender, EventArgs e)
+        private void Main_Load(object sender, EventArgs e)
         {
-            btnExit.Text = "Exit";
-            btnStart.Text = "Start";
-            btnPractice.Text = "Practice";
-            btnHighscore.Text = "Highscore";
+            english = true;
         }
 
         /// <summary>
-        /// Mijenja jezik na hrvatski.
+        /// Gumb koji mijenja jezik na hrvatski.
         /// </summary>
-        private void rbCroatian_CheckedChanged(object sender, EventArgs e)
+        private void btnCroatian_Click(object sender, EventArgs e)
         {
+            english = false;
+
             btnExit.Text = "Izlaz";
             btnStart.Text = "Početak";
             btnPractice.Text = "Vježbaj";
@@ -84,11 +84,16 @@ namespace Typing_game
         }
 
         /// <summary>
-        /// Izvršava se tijekom otvaranja aplikacije odnosno forme.
+        /// Gumb koji mijenja jezik na engleski (default).
         /// </summary>
-        private void Main_Load(object sender, EventArgs e)
+        private void btnEnglish_Click(object sender, EventArgs e)
         {
-            rbEnglish.Checked = true;
+            english = true;
+
+            btnExit.Text = "Exit";
+            btnStart.Text = "Start";
+            btnPractice.Text = "Practice";
+            btnHighscore.Text = "Highscore";
         }
     }
 }
