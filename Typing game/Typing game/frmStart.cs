@@ -112,8 +112,8 @@ namespace Typing_game
         }
 
         int number = 0;
-        int numbers = 0;
         List<string> allWords = null;
+        List<string> allWordsDis = null;
         /// <summary>
         /// Puni textbox sa slučajnim riječima.
         /// </summary>
@@ -121,32 +121,27 @@ namespace Typing_game
         {
             Random rand = new Random();
             allWords = new List<string>();
+            allWordsDis = new List<string>();
 
-            for (int j = 0; j < 200; j++)
+            for (int j = 0; j < 220; j++)
             {                
                 number = rand.Next(randomWords.Count);
 
-                if (numbers == number)
+                for (int i = 0; i < randomWords.Count; i++)
                 {
-                    // provjera da ne bi došla ista riječ
-                    RandomWords();
-                }
-                else
-                {
-                    for (int i = 0; i < randomWords.Count; i++)
+                    if (i == number)
                     {
-                        if (i == number)
-                        {
-                            allWords.Add(randomWords[i]);
-                            numbers = number;
-                        }
+                        allWords.Add(randomWords[i]);
                     }
                 }
+                
             }
 
-            txtWords.Text = allWords[0];
-            txtNextWord1.Text = allWords[1];
-            txtNextWord2.Text = allWords[2];
+            allWordsDis = allWords.Distinct().ToList();
+
+            txtWords.Text = allWordsDis[0];
+            txtNextWord1.Text = allWordsDis[1];
+            txtNextWord2.Text = allWordsDis[2];
         }
 
         Stopwatch stopwatch = new Stopwatch();
@@ -181,9 +176,9 @@ namespace Typing_game
             {
                 sizeOfWords = sizeOfWords + txtWords.TextLength;
                 
-                txtWords.Text = allWords[i + 1];
-                txtNextWord1.Text = allWords[i + 2];
-                txtNextWord2.Text = allWords[i + 3];
+                txtWords.Text = allWordsDis[i + 1];
+                txtNextWord1.Text = allWordsDis[i + 2];
+                txtNextWord2.Text = allWordsDis[i + 3];
 
                 i++;
 
