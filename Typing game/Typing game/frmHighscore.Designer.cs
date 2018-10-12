@@ -33,12 +33,13 @@
             this.txtHighscore = new System.Windows.Forms.TextBox();
             this.txtScore = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.highscoreTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nicknameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.scoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.highscoreBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cPMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wPMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.highscoreTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.highscoreBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHighscore
@@ -70,36 +71,43 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.nicknameDataGridViewTextBoxColumn,
-            this.scoreDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.highscoreTableBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(406, 175);
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.cPMDataGridViewTextBoxColumn,
+            this.wPMDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.highscoreBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(99, 193);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(585, 150);
             this.dataGridView1.TabIndex = 3;
             // 
-            // highscoreTableBindingSource
+            // highscoreBindingSource
             // 
-            this.highscoreTableBindingSource.DataSource = typeof(Typing_game.HighscoreTable);
+            this.highscoreBindingSource.DataSource = typeof(Typing_game.Highscore);
             // 
-            // idDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn1
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
-            // nicknameDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn2
             // 
-            this.nicknameDataGridViewTextBoxColumn.DataPropertyName = "Nickname";
-            this.nicknameDataGridViewTextBoxColumn.HeaderText = "Nickname";
-            this.nicknameDataGridViewTextBoxColumn.Name = "nicknameDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "nickname";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nickname";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // scoreDataGridViewTextBoxColumn
+            // cPMDataGridViewTextBoxColumn
             // 
-            this.scoreDataGridViewTextBoxColumn.DataPropertyName = "Score";
-            this.scoreDataGridViewTextBoxColumn.HeaderText = "Score";
-            this.scoreDataGridViewTextBoxColumn.Name = "scoreDataGridViewTextBoxColumn";
+            this.cPMDataGridViewTextBoxColumn.DataPropertyName = "CPM";
+            this.cPMDataGridViewTextBoxColumn.HeaderText = "CPM";
+            this.cPMDataGridViewTextBoxColumn.Name = "cPMDataGridViewTextBoxColumn";
+            // 
+            // wPMDataGridViewTextBoxColumn
+            // 
+            this.wPMDataGridViewTextBoxColumn.DataPropertyName = "WPM";
+            this.wPMDataGridViewTextBoxColumn.HeaderText = "WPM";
+            this.wPMDataGridViewTextBoxColumn.Name = "wPMDataGridViewTextBoxColumn";
             // 
             // frmHighscore
             // 
@@ -113,7 +121,7 @@
             this.Name = "frmHighscore";
             this.Text = "frmHighscore";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.highscoreTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.highscoreBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,9 +133,10 @@
         private System.Windows.Forms.TextBox txtHighscore;
         private System.Windows.Forms.TextBox txtScore;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nicknameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn scoreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource highscoreTableBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cPMDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn wPMDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource highscoreBindingSource;
     }
 }

@@ -18,18 +18,14 @@ namespace Typing_game
         }
 
         private void btnHighscore_Click(object sender, EventArgs e)
-        {
-            //string newpath = @"Data Source= ..\..\dbTypingGame.mdf";
+        {            
+            BindingList<Highscore> lista = null;
 
-            //AppDomain.CurrentDomain.SetData("DataDirectory", newpath);
-
-            BindingList<HighscoreTable> lista = null;
-
-            using(dbTypingGameEntities1 baza = new dbTypingGameEntities1())
+            using(dbTypingGameEntities baza = new dbTypingGameEntities())
             {
-                lista = new BindingList<HighscoreTable>(baza.HighscoreTable.ToList());
+                lista = new BindingList<Highscore>(baza.Highscore.ToList());
             }
-            highscoreTableBindingSource.DataSource = lista;
+            highscoreBindingSource.DataSource = lista;
         }
     }
 }

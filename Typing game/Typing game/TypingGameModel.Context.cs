@@ -13,10 +13,10 @@ namespace Typing_game
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class dbTypingGameEntities1 : DbContext
+    public partial class dbTypingGameEntities : DbContext
     {
-        public dbTypingGameEntities1()
-            : base("name=dbTypingGameEntities1")
+        public dbTypingGameEntities()
+            : base("name=dbTypingGameEntities")
         {
         }
     
@@ -25,6 +25,6 @@ namespace Typing_game
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<HighscoreTable> HighscoreTable { get; set; }
+        public virtual DbSet<Highscore> Highscore { get; set; }
     }
 }

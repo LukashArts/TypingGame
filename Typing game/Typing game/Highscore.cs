@@ -14,7 +14,9 @@ namespace Typing_game
     
     public partial class Highscore
     {
-        public string Nickname { get; set; }
-        public int Score { get; set; }
+        public int ID { get; set; }
+        public string nickname { get; set; }
+        public int CPM { get; set; }
+        public int WPM { get; set; }
     }
 }

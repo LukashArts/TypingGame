@@ -4,8 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="afd67254e7244670b0b90b91ed09f76f" Name="Diagram1">
-        <EntityTypeShape EntityType="dbTypingGameModel.HighscoreTable" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="4aa5d904c6c24c9399212ce16e44a7e2" Name="Diagram1">
+        <EntityTypeShape EntityType="dbTypingGameModel.Highscore" Width="1.5" PointX="0.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
