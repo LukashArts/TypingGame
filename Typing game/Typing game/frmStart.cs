@@ -22,6 +22,7 @@ namespace Typing_game
         public frmStart()
         {
             ClassLibrary1.Class1 words = new ClassLibrary1.Class1();
+
             randomWords = words.GetWordList();
 
             InitializeComponent();            
@@ -113,7 +114,6 @@ namespace Typing_game
         int number = 0;
         int numbers = 0;
         List<string> allWords = new List<string>();
-        //List<string> listAllWords = new List<string>();
         /// <summary>
         /// Puni textbox sa slučajnim riječima.
         /// </summary>
@@ -269,11 +269,11 @@ namespace Typing_game
 
             if(lbSeconds.Text == "1:00.0")
             {
-                CPM = minutes * sizeOfWords;
+                CPM = sizeOfWords;
             }
             else
             {
-                CPM = (minutes / time) * sizeOfWords;                
+                CPM = sizeOfWords / time;                
             }
 
             WPM = CPM / 5;
