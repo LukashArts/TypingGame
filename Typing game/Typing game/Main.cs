@@ -40,8 +40,16 @@ namespace Typing_game
         /// </summary>
         private void btnHighscore_Click(object sender, EventArgs e)
         {
-            frmHighscore highscore = new frmHighscore();
-            highscore.ShowDialog();
+            if (english)
+            {
+                frmHighscore highscore = new frmHighscore();
+                highscore.ShowDialog();
+            }
+            else
+            {
+                frmHighscore highscore = new frmHighscore(true);
+                highscore.ShowDialog();
+            }
         }
 
         /// <summary>
@@ -57,8 +65,16 @@ namespace Typing_game
         /// </summary>
         private void btnPractice_Click(object sender, EventArgs e)
         {
-            frmPractice practice = new frmPractice();
-            practice.ShowDialog();
+            if (english)
+            {
+                frmPractice practice = new frmPractice();
+                practice.ShowDialog();
+            }
+            else
+            {            
+                frmPractice practice = new frmPractice(true);
+                practice.ShowDialog();
+            }
         }
 
         bool english = false;

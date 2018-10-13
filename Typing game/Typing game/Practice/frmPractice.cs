@@ -17,6 +17,23 @@ namespace Typing_game
             InitializeComponent();
         }
 
+        private bool Hrv { get; set; }
+
+        /// <summary>
+        /// Konstruktor ako je odabran hrvatski jezik.
+        /// </summary>
+        /// <param name="hrvatski">Odabrani jezik.</param>
+        public frmPractice(bool hrvatski)
+        {
+            Hrv = hrvatski;
+            InitializeComponent();
+
+            label1.Text = "Odaberite težinu:";
+            btnEasy.Text = "Lagana";
+            btnMedium.Text = "Srednja";
+            btnHard.Text = "Teška";
+        }
+
         /// <summary>
         /// Lagana razina.
         /// </summary>

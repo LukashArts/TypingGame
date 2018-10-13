@@ -17,6 +17,21 @@ namespace Typing_game
             InitializeComponent();
         }
 
+        private bool Hrv { get; set; }
+
+        /// <summary>
+        /// Konstruktor koji se izvršava ako je odabran hrvatski jezik.
+        /// </summary>
+        /// <param name="hrvatski">Odabrani jezik.</param>
+        public frmHighscore(bool hrvatski)
+        {
+            Hrv = hrvatski;
+
+            InitializeComponent();
+
+            dataGridView1.Columns[2].HeaderText = "Ime";
+        }
+
         /// <summary>
         /// Izvršava se prilikom učitavanja forme.
         /// </summary>
