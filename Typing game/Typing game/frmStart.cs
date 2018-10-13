@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using ClassLibrary1;
 using EasyWords;
 using hrvrijeci;
+using medium;
 
 namespace Typing_game
 {
@@ -67,7 +68,8 @@ namespace Typing_game
 
             else if(choosenDifficulty == "medium")
             {
-
+                medium.Class1 words = new medium.Class1();
+                randomWords = words.GetWordList();
             }
 
             else if(choosenDifficulty == "hard")
