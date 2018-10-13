@@ -30,12 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Position = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Position = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cPMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.wPMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.highscoreBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnEnglish = new System.Windows.Forms.Button();
+            this.btnCroatian = new System.Windows.Forms.Button();
+            this.btnAll = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.highscoreBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -53,19 +56,13 @@
             this.cPMDataGridViewTextBoxColumn,
             this.wPMDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.highscoreBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 49);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(335, 273);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView1_RowPostPaint);
-            // 
-            // Position
-            // 
-            this.Position.HeaderText = "";
-            this.Position.Name = "Position";
-            this.Position.ReadOnly = true;
-            this.Position.Width = 30;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -74,6 +71,13 @@
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // Position
+            // 
+            this.Position.HeaderText = "";
+            this.Position.Name = "Position";
+            this.Position.ReadOnly = true;
+            this.Position.Width = 30;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -102,11 +106,44 @@
             // 
             this.highscoreBindingSource.DataSource = typeof(Typing_game.Highscore);
             // 
+            // btnEnglish
+            // 
+            this.btnEnglish.Location = new System.Drawing.Point(191, 12);
+            this.btnEnglish.Name = "btnEnglish";
+            this.btnEnglish.Size = new System.Drawing.Size(75, 23);
+            this.btnEnglish.TabIndex = 4;
+            this.btnEnglish.Text = "English";
+            this.btnEnglish.UseVisualStyleBackColor = true;
+            this.btnEnglish.Click += new System.EventHandler(this.btnEnglish_Click);
+            // 
+            // btnCroatian
+            // 
+            this.btnCroatian.Location = new System.Drawing.Point(272, 12);
+            this.btnCroatian.Name = "btnCroatian";
+            this.btnCroatian.Size = new System.Drawing.Size(75, 23);
+            this.btnCroatian.TabIndex = 5;
+            this.btnCroatian.Text = "Croatian";
+            this.btnCroatian.UseVisualStyleBackColor = true;
+            this.btnCroatian.Click += new System.EventHandler(this.btnCroatian_Click);
+            // 
+            // btnAll
+            // 
+            this.btnAll.Location = new System.Drawing.Point(12, 12);
+            this.btnAll.Name = "btnAll";
+            this.btnAll.Size = new System.Drawing.Size(75, 23);
+            this.btnAll.TabIndex = 6;
+            this.btnAll.Text = "All";
+            this.btnAll.UseVisualStyleBackColor = true;
+            this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
+            // 
             // frmHighscore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(372, 314);
+            this.ClientSize = new System.Drawing.Size(361, 334);
+            this.Controls.Add(this.btnAll);
+            this.Controls.Add(this.btnCroatian);
+            this.Controls.Add(this.btnEnglish);
             this.Controls.Add(this.dataGridView1);
             this.Name = "frmHighscore";
             this.Text = "frmHighscore";
@@ -125,5 +162,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn cPMDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn wPMDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnEnglish;
+        private System.Windows.Forms.Button btnCroatian;
+        private System.Windows.Forms.Button btnAll;
     }
 }

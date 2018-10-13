@@ -13,6 +13,7 @@
           <Property Name="nickname" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="CPM" Type="int" Nullable="false" />
           <Property Name="WPM" Type="int" Nullable="false" />
+          <Property Name="language" Type="bit" Nullable="false" />
         </EntityType>
         <EntityContainer Name="dbTypingGameModelStoreContainer">
           <EntitySet Name="Highscore" EntityType="Self.Highscore" Schema="dbo" store:Type="Tables" />
@@ -32,6 +33,7 @@
           <Property Name="nickname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="CPM" Type="Int32" Nullable="false" />
           <Property Name="WPM" Type="Int32" Nullable="false" />
+          <Property Name="language" Type="Boolean" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -42,6 +44,7 @@
           <EntitySetMapping Name="Highscore">
             <EntityTypeMapping TypeName="dbTypingGameModel.Highscore">
               <MappingFragment StoreEntitySet="Highscore">
+                <ScalarProperty Name="language" ColumnName="language" />
                 <ScalarProperty Name="WPM" ColumnName="WPM" />
                 <ScalarProperty Name="CPM" ColumnName="CPM" />
                 <ScalarProperty Name="nickname" ColumnName="nickname" />

@@ -18,5 +18,6 @@ namespace Typing_game
         public string nickname { get; set; }
         public int CPM { get; set; }
         public int WPM { get; set; }
+        public bool language { get; set; }
     }
 }

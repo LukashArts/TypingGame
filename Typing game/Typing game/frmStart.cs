@@ -135,8 +135,7 @@ namespace Typing_game
                     {
                         allWords.Add(randomWords[i]);
                     }
-                }
-                
+                }                
             }
 
             allWordsDis = allWords.Distinct().ToList();
@@ -288,9 +287,12 @@ namespace Typing_game
 
             textBox1.Text = iCPM.ToString();
             textBox2.Text = iWPM.ToString();
-            
-            ScoreInput scoreInput = new ScoreInput(iCPM, iWPM);
+                        
+            ScoreInput scoreInput = new ScoreInput(iCPM, iWPM, hrvat);
             scoreInput.ShowDialog();
+
+            frmHighscore frm = new frmHighscore(hrvat);
+            frm.ShowDialog();
         }
     }
 }
