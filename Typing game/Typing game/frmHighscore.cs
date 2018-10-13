@@ -17,15 +17,29 @@ namespace Typing_game
             InitializeComponent();
         }
 
-        private void btnHighscore_Click(object sender, EventArgs e)
-        {            
+        /// <summary>
+        /// Izvršava se prilikom učitavanja forme.
+        /// </summary>
+        private void frmHighscore_Load(object sender, EventArgs e)
+        {
             BindingList<Highscore> lista = null;
 
-            using(dbTypingGameEntities baza = new dbTypingGameEntities())
+            using (dbTypingGameEntities baza = new dbTypingGameEntities())
             {
                 lista = new BindingList<Highscore>(baza.Highscore.ToList());
             }
-            highscoreBindingSource.DataSource = lista;
+
+            List<Highscore> SortedList = lista.OrderByDescending(o => o.CPM).ToList();
+
+            highscoreBindingSource.DataSource = SortedList;
+        }
+
+        /// <summary>
+        /// Ispisuje poredak u Highscoreu.
+        /// </summary>
+        private void dataGridView1_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            this.dataGridView1.Rows[e.RowIndex].Cells[1].Value = (e.RowIndex + 1).ToString();
         }
     }
 }

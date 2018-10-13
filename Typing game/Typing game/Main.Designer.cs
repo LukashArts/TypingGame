@@ -98,7 +98,7 @@
             this.btnCroatian.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCroatian.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCroatian.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCroatian.Location = new System.Drawing.Point(107, 79);
+            this.btnCroatian.Location = new System.Drawing.Point(152, 79);
             this.btnCroatian.Name = "btnCroatian";
             this.btnCroatian.Size = new System.Drawing.Size(41, 25);
             this.btnCroatian.TabIndex = 8;
@@ -112,7 +112,7 @@
             this.btnEnglish.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEnglish.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEnglish.ForeColor = System.Drawing.Color.Transparent;
-            this.btnEnglish.Location = new System.Drawing.Point(154, 79);
+            this.btnEnglish.Location = new System.Drawing.Point(105, 79);
             this.btnEnglish.Name = "btnEnglish";
             this.btnEnglish.Size = new System.Drawing.Size(41, 25);
             this.btnEnglish.TabIndex = 9;

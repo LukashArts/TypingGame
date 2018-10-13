@@ -156,8 +156,9 @@ namespace Typing_game
             {
                 lbSeconds.Text = stopwatch.Elapsed.ToString("m\\:ss\\.f");
                 if (check == true || string.IsNullOrWhiteSpace(txtWrite.Text))
-                {
+                {                    
                     stopwatch.Stop();
+                    timer.Stop();
                     txtWrite.Enabled = false;
                     Calculating();
                 }
@@ -277,8 +278,17 @@ namespace Typing_game
 
             WPM = CPM / 5;
 
-            textBox1.Text = CPM.ToString();
-            textBox2.Text = WPM.ToString();
+            decimal dCPM = (decimal)CPM;
+            decimal dWPM = (decimal)WPM;
+
+            int iCPM = (int)decimal.Round(dCPM, 0, MidpointRounding.AwayFromZero);
+            int iWPM = (int)decimal.Round(dWPM, 0, MidpointRounding.AwayFromZero);
+
+            textBox1.Text = iCPM.ToString();
+            textBox2.Text = iWPM.ToString();
+            
+            ScoreInput scoreInput = new ScoreInput(iCPM, iWPM);
+            scoreInput.ShowDialog();
         }
     }
 }

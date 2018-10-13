@@ -108,6 +108,12 @@
     <Compile Include="frmStart.Designer.cs">
       <DependentUpon>frmStart.cs</DependentUpon>
     </Compile>
+    <Compile Include="ScoreInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScoreInput.Designer.cs">
+      <DependentUpon>ScoreInput.cs</DependentUpon>
+    </Compile>
     <Compile Include="TypingGameModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -145,6 +151,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ScoreInput.resx">
+      <DependentUpon>ScoreInput.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Highscore.datasource" />
     <None Include="Properties\Settings.settings">
