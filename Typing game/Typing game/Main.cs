@@ -53,11 +53,26 @@ namespace Typing_game
         }
 
         /// <summary>
-        /// Izlazi iz aplikacije.
+        /// Izlaz iz aplikacije.
         /// </summary>
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (english)
+            {
+                DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if(result == DialogResult.Yes)
+                {
+                    this.Close();
+                }
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Jeste li sigurni da želite izaći?", "Izlaz", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (result == DialogResult.Yes)
+                {
+                    this.Close();
+                }
+            }
         }
 
         /// <summary>
