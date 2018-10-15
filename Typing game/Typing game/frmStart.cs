@@ -294,5 +294,19 @@ namespace Typing_game
             frmHighscore frm = new frmHighscore(hrvat);
             frm.ShowDialog();
         }
+
+        /// <summary>
+        /// Izvršava se nakon što se stisne tipka F12 (HELP).
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void frmStart_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.F12)
+            {
+                frmHELP frm = new frmHELP(hrvat);
+                frm.ShowDialog();
+            }
+        }
     }
 }

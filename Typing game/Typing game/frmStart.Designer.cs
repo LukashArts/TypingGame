@@ -188,6 +188,7 @@
             this.Name = "frmStart";
             this.Text = "StartForm";
             this.Load += new System.EventHandler(this.frmStart_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmStart_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

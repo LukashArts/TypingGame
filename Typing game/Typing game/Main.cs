@@ -156,7 +156,10 @@ namespace Typing_game
         {
             //Process.Start(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "spartan-trials.pdf"));
 
-            Process.Start("spartan-trials.pdf");
+            //Process.Start("spartan-trials.pdf");
+
+            frmHELP frm = new frmHELP(english);
+            frm.ShowDialog();
 
             //ProcessStartInfo startInfo = new ProcessStartInfo("C:\\Program Files (x86)\\Adobe\\Acrobat 11.0\\Acrobat\\Acrobat.exe", "/A page=5 C:\\spartan-trials.pdf");
             //startInfo.WindowStyle = ProcessWindowStyle.Maximized;

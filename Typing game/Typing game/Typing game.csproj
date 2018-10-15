@@ -32,10 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ClassLibrary1, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\ClassLibrary1.dll</HintPath>
-    </Reference>
     <Reference Include="ClassLibrary2, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\ClassLibrary2.dll</HintPath>
@@ -87,11 +83,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HELP\frmHELP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HELP\frmHELP.Designer.cs">
+      <DependentUpon>frmHELP.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHighscore.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmHighscore.Designer.cs">
       <DependentUpon>frmHighscore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HELP\frmHELPMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HELP\frmHELPMain.Designer.cs">
+      <DependentUpon>frmHELPMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HELP\frmHELPStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HELP\frmHELPStart.Designer.cs">
+      <DependentUpon>frmHELPStart.cs</DependentUpon>
     </Compile>
     <Compile Include="Highscore.cs">
       <DependentUpon>TypingGameModel.tt</DependentUpon>
@@ -142,6 +156,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmStart.resx">
       <DependentUpon>frmStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HELP\frmHELP.resx">
+      <DependentUpon>frmHELP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HELP\frmHELPMain.resx">
+      <DependentUpon>frmHELPMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HELP\frmHELPStart.resx">
+      <DependentUpon>frmHELPStart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
