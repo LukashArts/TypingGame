@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -125,6 +128,39 @@ namespace Typing_game
             btnStart.Text = "Start";
             btnPractice.Text = "Practice";
             btnHighscore.Text = "Highscore";
+        }
+
+        /// <summary>
+        /// Izvršava se nakon što se stisne HELP (?).
+        /// </summary>
+        private void Main_HelpButtonClicked(object sender, CancelEventArgs e)
+        {
+            LoadHelp();
+        }
+
+        /// <summary>
+        /// Izvršava se nakon što se stisne gumb F12 (za HELP).
+        /// </summary>
+        private void Main_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F12)
+            {
+                LoadHelp();
+            }
+        }
+
+        /// <summary>
+        /// Učitava HELP file.
+        /// </summary>
+        private void LoadHelp()
+        {
+            //Process.Start(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "spartan-trials.pdf"));
+
+            Process.Start("spartan-trials.pdf");
+
+            //ProcessStartInfo startInfo = new ProcessStartInfo("C:\\Program Files (x86)\\Adobe\\Acrobat 11.0\\Acrobat\\Acrobat.exe", "/A page=5 C:\\spartan-trials.pdf");
+            //startInfo.WindowStyle = ProcessWindowStyle.Maximized;
+            //Process.Start(startInfo);
         }
     }
 }

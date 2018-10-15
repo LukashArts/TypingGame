@@ -131,9 +131,15 @@
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCroatian);
+            this.HelpButton = true;
+            this.KeyPreview = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Main";
             this.Text = "Form1";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.Main_HelpButtonClicked);
             this.Load += new System.EventHandler(this.Main_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Main_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
