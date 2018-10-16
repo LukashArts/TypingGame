@@ -95,11 +95,35 @@
     <Compile Include="frmHighscore.Designer.cs">
       <DependentUpon>frmHighscore.cs</DependentUpon>
     </Compile>
+    <Compile Include="HELP\frmHELPAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HELP\frmHELPAbout.Designer.cs">
+      <DependentUpon>frmHELPAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HELP\frmHELPHighscore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HELP\frmHELPHighscore.Designer.cs">
+      <DependentUpon>frmHELPHighscore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HELP\frmHELPLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HELP\frmHELPLanguage.Designer.cs">
+      <DependentUpon>frmHELPLanguage.cs</DependentUpon>
+    </Compile>
     <Compile Include="HELP\frmHELPMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HELP\frmHELPMain.Designer.cs">
       <DependentUpon>frmHELPMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HELP\frmHELPPractice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HELP\frmHELPPractice.Designer.cs">
+      <DependentUpon>frmHELPPractice.cs</DependentUpon>
     </Compile>
     <Compile Include="HELP\frmHELPStart.cs">
       <SubType>Form</SubType>
@@ -160,8 +184,20 @@
     <EmbeddedResource Include="HELP\frmHELP.resx">
       <DependentUpon>frmHELP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HELP\frmHELPAbout.resx">
+      <DependentUpon>frmHELPAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HELP\frmHELPHighscore.resx">
+      <DependentUpon>frmHELPHighscore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HELP\frmHELPLanguage.resx">
+      <DependentUpon>frmHELPLanguage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HELP\frmHELPMain.resx">
       <DependentUpon>frmHELPMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HELP\frmHELPPractice.resx">
+      <DependentUpon>frmHELPPractice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HELP\frmHELPStart.resx">
       <DependentUpon>frmHELPStart.cs</DependentUpon>

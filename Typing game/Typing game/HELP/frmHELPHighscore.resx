@@ -117,4 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="lbText.Text" xml:space="preserve">
+    <value>At highscore table you can check your results. Show that
+you're better than others!
+
+There is ALL, English and Croatian leaderboard.
+
+ALL table is results with both languages,
+ENGLISH table is only with choosen English language and
+CROATIAN table is only with choosen Croatian language.</value>
+  </data>
 </root>

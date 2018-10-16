@@ -81,7 +81,10 @@ namespace Typing_game
         /// </summary>
         private void msPractice_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Practice");
+            frmHELPPractice frm = new frmHELPPractice(eng);
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
         }
 
         /// <summary>
@@ -89,7 +92,10 @@ namespace Typing_game
         /// </summary>
         private void msHighscore_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Highscore");
+            frmHELPHighscore frm = new frmHELPHighscore(eng);
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
         }
 
         /// <summary>
@@ -97,7 +103,21 @@ namespace Typing_game
         /// </summary>
         private void msLanguage_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Language");
+            frmHELPLanguage frm = new frmHELPLanguage(eng);
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        /// <summary>
+        /// Izvršava se nakon što se odabere About MenuStrip.
+        /// </summary>
+        private void msAbout_Click(object sender, EventArgs e)
+        {
+            frmHELPAbout frm = new frmHELPAbout(eng);
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
         }
     }
 }

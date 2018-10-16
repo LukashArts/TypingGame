@@ -30,7 +30,14 @@ namespace Typing_game.HELP
 
             if(eng == false)
             {
-                lbTitle.Text = "Računanje brzine tipkanja (CPM i WPM)";
+                lbTitle.Text = "Računanje brzine tipkanja";
+                lbText.Text = "Glavna funkcionalnost aplikacije jest da računa\nbrzinu tipkanja. Probajte biti što brži možete!";
+
+                lbText2.Location = new Point(57, 155);
+                lbText3.Location = new Point(104, 155);
+                lbText3.Text = "Slova po minuti (engl. Characters per minute)\nRiječi po minuti (engl. Words per minute)";
+                lbText4.Text = "WPM se dobiva tako da se CPM podijeli s 5, jer se prosječna\nriječ sastoji od 5 slova.";
+                lbTextWords.Text = "Riječi su slučajno odabrane!";
             }
         }
     }

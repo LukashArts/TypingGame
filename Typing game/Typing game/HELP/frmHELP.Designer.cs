@@ -34,6 +34,7 @@
             this.msPractice = new System.Windows.Forms.ToolStripMenuItem();
             this.msHighscore = new System.Windows.Forms.ToolStripMenuItem();
             this.msLanguage = new System.Windows.Forms.ToolStripMenuItem();
+            this.msAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,7 +45,8 @@
             this.msStart,
             this.msPractice,
             this.msHighscore,
-            this.msLanguage});
+            this.msLanguage,
+            this.msAbout});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(450, 24);
@@ -86,6 +88,13 @@
             this.msLanguage.Text = "Language";
             this.msLanguage.Click += new System.EventHandler(this.msLanguage_Click);
             // 
+            // msAbout
+            // 
+            this.msAbout.Name = "msAbout";
+            this.msAbout.Size = new System.Drawing.Size(52, 20);
+            this.msAbout.Text = "About";
+            this.msAbout.Click += new System.EventHandler(this.msAbout_Click);
+            // 
             // frmHELP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,5 +121,6 @@
         private System.Windows.Forms.ToolStripMenuItem msPractice;
         private System.Windows.Forms.ToolStripMenuItem msLanguage;
         private System.Windows.Forms.ToolStripMenuItem msHighscore;
+        private System.Windows.Forms.ToolStripMenuItem msAbout;
     }
 }

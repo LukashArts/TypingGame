@@ -90,14 +90,14 @@ namespace Typing_game
         {
             RandomWords();
 
-            if(choosenDifficulty == "easy")
+            if (choosenDifficulty == "easy")
             {
                 lbTimeName.Hide();
                 lbSeconds.Text = "Difficulty: EASY";
                 lbSeconds.Location = new Point(200, 35);
                 lbSeconds.Font = new Font(lbSeconds.Font.FontFamily, 12);
             }
-            else if(choosenDifficulty == "medium")
+            else if (choosenDifficulty == "medium")
             {
                 lbTimeName.Hide();
                 lbSeconds.Text = "Difficulty: MEDIUM";
@@ -296,16 +296,14 @@ namespace Typing_game
         }
 
         /// <summary>
-        /// Izvršava se nakon što se stisne tipka F12 (HELP).
+        /// Izvršava se ako korisnik izađe iz forme Start.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void frmStart_KeyDown(object sender, KeyEventArgs e)
+        private void frmStart_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(e.KeyCode == Keys.F12)
+            if (e.CloseReason == CloseReason.UserClosing)
             {
-                frmHELP frm = new frmHELP(hrvat);
-                frm.ShowDialog();
+                timer.Stop();
+                stopwatch.Stop();
             }
         }
     }
