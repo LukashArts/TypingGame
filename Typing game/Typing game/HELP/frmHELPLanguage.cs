@@ -35,16 +35,21 @@ namespace Typing_game.HELP
                 lbText.Text = "Možete birati između dva jezika:\n\n     hrvatskog i engleskog\n\nJezik se može promijeniti u Meniju klikom na zastave i ovdje!";
             }
         }
-
-
+        
         /// <summary>
         /// Prebacuje jezik u engleski.
         /// </summary>
         private void btnEnglish_Click(object sender, EventArgs e)
         {
-            eng = true;
-
-            CloseOneOpenAnother();
+            if (eng == false)
+            {
+                eng = true;
+                CloseOneOpenAnother();
+            }
+            else
+            {
+                MessageBox.Show("English is already selected!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         /// <summary>
@@ -52,16 +57,25 @@ namespace Typing_game.HELP
         /// </summary>
         private void btnCroatian_Click(object sender, EventArgs e)
         {
-            eng = false;
-
-            CloseOneOpenAnother();
+            if (eng == true)
+            {
+                eng = false;
+                CloseOneOpenAnother();
+            }
+            else
+            {
+                MessageBox.Show("Već je odabran hrvatski jezik!", "Informacija", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
+        /// <summary>
+        /// Zatvara parent formu i tada otvara opet HELP.
+        /// </summary>
         private void CloseOneOpenAnother()
         {
             MdiParent.Close();
 
-            frmHELP frm = new frmHELP(eng);
+            frmHELP frm = new frmHELP(eng, true);
             frm.Show();
 
             frm.TopMost = true;

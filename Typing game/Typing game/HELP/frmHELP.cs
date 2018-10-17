@@ -27,6 +27,30 @@ namespace Typing_game
         public frmHELP(bool english)
         {
             eng = english;
+
+            ChangeMSLanguage();
+        }
+
+        private bool verify { get; set; }
+
+        /// <summary>
+        /// Izvršava se ako je promijenjen jezik u msLanguage.
+        /// </summary>
+        /// <param name="english"></param>
+        /// <param name="i">Jezik je promijenjen</param>
+        public frmHELP(bool english, bool i)
+        {
+            verify = i;
+            eng = english;
+
+            ChangeMSLanguage();
+        }
+
+        /// <summary>
+        /// Mijenja jezik na MenuStripu.
+        /// </summary>
+        private void ChangeMSLanguage()
+        {                        
             InitializeComponent();
 
             if (eng == false)
@@ -35,15 +59,24 @@ namespace Typing_game
                 msLanguage.Text = "Jezik";
                 msMain.Text = "Glavni";
                 msPractice.Text = "Vježbaj";
-            }                      
+            }
         }
-
         /// <summary>
         /// Izvršava se prilikom otvaranja forme.
         /// </summary>
         private void frmHELP_Load(object sender, EventArgs e)
         {
-            HELPMain();
+            this.CenterToScreen();
+
+            if (verify == true)
+            {
+                msLanguage.PerformClick();
+            }
+            else
+            {
+                HELPMain();
+            }
+            
         }
 
         /// <summary>

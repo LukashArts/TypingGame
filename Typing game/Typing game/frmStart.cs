@@ -23,7 +23,6 @@ namespace Typing_game
         public frmStart()
         {
             ClassLibrary1.Class1 words = new ClassLibrary1.Class1();
-
             randomWords = words.GetWordList();
 
             InitializeComponent();            
@@ -57,7 +56,7 @@ namespace Typing_game
         /// </summary>
         /// <param name="difficulty">Težina riječi.</param>
         public frmStart(string difficulty)
-        {              
+        {       
             choosenDifficulty = difficulty;
             
             if(choosenDifficulty == "easy")
@@ -89,6 +88,7 @@ namespace Typing_game
         private void frmStart_Load(object sender, EventArgs e)
         {
             RandomWords();
+            this.CenterToScreen();
 
             if (choosenDifficulty == "easy")
             {

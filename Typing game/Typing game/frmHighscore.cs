@@ -40,6 +40,8 @@ namespace Typing_game
         /// </summary>
         private void frmHighscore_Load(object sender, EventArgs e)
         {
+            this.CenterToScreen();
+
             LoadingHighscore();
             LoadingHighscore(); //nekako srediti ovo da se ne mora dva puta učitavat
             highscoreBindingSource.DataSource = FirstTenHighscores;

@@ -101,6 +101,7 @@ namespace Typing_game
         /// </summary>
         private void Main_Load(object sender, EventArgs e)
         {
+            this.CenterToScreen();
             english = true;
         }
 

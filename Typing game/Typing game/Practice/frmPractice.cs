@@ -60,5 +60,13 @@ namespace Typing_game
             frmStart start = new frmStart("hard");
             start.ShowDialog();
         }
+
+        /// <summary>
+        /// Izvršava se prilikom učitavanja forme.
+        /// </summary>
+        private void frmPractice_Load(object sender, EventArgs e)
+        {
+            this.CenterToScreen();
+        }
     }
 }

@@ -85,6 +85,7 @@
             this.Controls.Add(this.btnEasy);
             this.Name = "frmPractice";
             this.Text = "frmPractice";
+            this.Load += new System.EventHandler(this.frmPractice_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
