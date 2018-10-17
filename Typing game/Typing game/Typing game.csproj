@@ -83,6 +83,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmCustomText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomText.Designer.cs">
+      <DependentUpon>frmCustomText.cs</DependentUpon>
+    </Compile>
     <Compile Include="HELP\frmHELP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +181,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TypingGameModel.edmx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmCustomText.resx">
+      <DependentUpon>frmCustomText.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHighscore.resx">
       <DependentUpon>frmHighscore.cs</DependentUpon>
     </EmbeddedResource>

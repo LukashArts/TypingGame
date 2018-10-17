@@ -80,8 +80,29 @@ namespace Typing_game
             InitializeComponent();
         }
 
-        List<string> randomWords = null;
+        private bool verifyingCustom = false;
+        private bool type = true;
+        /// <summary>
+        /// Izvršava se ako korisnik odabere custom text prilikom vježbanja.
+        /// </summary>
+        /// <param name="customText">Lista teksta.</param>
+        /// <param name="typeOfText">Tip teksta.</param>
+        public frmStart(List<string> customText, string typeOfText)
+        {
+            randomWords = customText;
 
+            if (typeOfText == "random")
+                type = true;
+            else
+                type = false;
+
+            verifyingCustom = true;
+            choosenDifficulty = "custom";
+
+            InitializeComponent();
+        }
+
+        List<string> randomWords = null;
         /// <summary>
         /// Pokreće se prilikom otvaranja forme.
         /// </summary>
@@ -111,6 +132,13 @@ namespace Typing_game
                 lbSeconds.Location = new Point(200, 35);
                 lbSeconds.Font = new Font(lbSeconds.Font.FontFamily, 12);
             }
+            else if(choosenDifficulty == "custom")
+            {
+                lbTimeName.Hide();
+                lbSeconds.Text = "Difficulty: CUSTOM";
+                lbSeconds.Location = new Point(200, 35);
+                lbSeconds.Font = new Font(lbSeconds.Font.FontFamily, 12);
+            }
         }
 
         int number = 0;
@@ -125,24 +153,50 @@ namespace Typing_game
             allWords = new List<string>();
             allWordsDis = new List<string>();
 
-            for (int j = 0; j < 220; j++)
-            {                
-                number = rand.Next(randomWords.Count);
-
-                for (int i = 0; i < randomWords.Count; i++)
+            if(type == true)
+            {
+                for (int j = 0; j < 220; j++)
                 {
-                    if (i == number)
+                    number = rand.Next(randomWords.Count);
+
+                    for (int i = 0; i < randomWords.Count; i++)
                     {
-                        allWords.Add(randomWords[i]);
+                        if (i == number)
+                        {
+                            if (allWords.Count == 0)
+                            {
+                                allWords.Add(randomWords[i]);
+                                break;
+                            }
+                            else
+                            {
+                                if (allWords[allWords.Count - 1] == randomWords[i])
+                                {
+                                    break;
+                                }
+                                else
+                                {
+                                    allWords.Add(randomWords[i]);
+                                    break;
+                                }
+                            }
+                        }
                     }
-                }                
+                }
+
+                if (verifyingCustom == false)
+                    allWordsDis = allWords.Distinct().ToList();
+                else
+                    allWordsDis = allWords;
+
+                txtWords.Text = allWordsDis[0];
+                txtNextWord1.Text = allWordsDis[1];
+                txtNextWord2.Text = allWordsDis[2];
             }
-
-            allWordsDis = allWords.Distinct().ToList();
-
-            txtWords.Text = allWordsDis[0];
-            txtNextWord1.Text = allWordsDis[1];
-            txtNextWord2.Text = allWordsDis[2];
+            else
+            {
+                allWordsDis = randomWords;
+            }
         }
 
         Stopwatch stopwatch = new Stopwatch();
@@ -177,11 +231,11 @@ namespace Typing_game
             if(txtWrite.Text == txtWords.Text)
             {
                 sizeOfWords = sizeOfWords + txtWords.TextLength;
-                
+
                 txtWords.Text = allWordsDis[i + 1];
                 txtNextWord1.Text = allWordsDis[i + 2];
                 txtNextWord2.Text = allWordsDis[i + 3];
-
+                //ponavljanje tih 3 riječi ako je custom
                 i++;
 
                 txtWrite.Clear();
@@ -208,7 +262,7 @@ namespace Typing_game
             }
             else
             {
-                if(choosenDifficulty == null)
+                if(choosenDifficulty == null && verifyingCustom == false)
                 {
                     timer.Start();
                     stopwatch.Start();

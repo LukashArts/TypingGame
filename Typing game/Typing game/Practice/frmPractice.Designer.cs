@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnMedium = new System.Windows.Forms.Button();
             this.btnHard = new System.Windows.Forms.Button();
+            this.btnCustom = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnEasy
@@ -74,11 +75,22 @@
             this.btnHard.UseVisualStyleBackColor = true;
             this.btnHard.Click += new System.EventHandler(this.btnHard_Click);
             // 
+            // btnCustom
+            // 
+            this.btnCustom.Location = new System.Drawing.Point(55, 182);
+            this.btnCustom.Name = "btnCustom";
+            this.btnCustom.Size = new System.Drawing.Size(125, 34);
+            this.btnCustom.TabIndex = 6;
+            this.btnCustom.Text = "Custom";
+            this.btnCustom.UseVisualStyleBackColor = true;
+            this.btnCustom.Click += new System.EventHandler(this.btnCustom_Click);
+            // 
             // frmPractice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(238, 216);
+            this.ClientSize = new System.Drawing.Size(238, 238);
+            this.Controls.Add(this.btnCustom);
             this.Controls.Add(this.btnHard);
             this.Controls.Add(this.btnMedium);
             this.Controls.Add(this.label1);
@@ -97,5 +109,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnMedium;
         private System.Windows.Forms.Button btnHard;
+        private System.Windows.Forms.Button btnCustom;
     }
 }

@@ -68,5 +68,14 @@ namespace Typing_game
         {
             this.CenterToScreen();
         }
+
+        /// <summary>
+        /// Custom razina.
+        /// </summary>
+        private void btnCustom_Click(object sender, EventArgs e)
+        {
+            frmCustomText frm = new frmCustomText();
+            frm.ShowDialog();            
+        }
     }
 }
