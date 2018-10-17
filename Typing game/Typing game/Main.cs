@@ -65,7 +65,7 @@ namespace Typing_game
                 DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if(result == DialogResult.Yes)
                 {
-                    this.Close();
+                    Application.Exit();
                 }
             }
             else
@@ -73,7 +73,7 @@ namespace Typing_game
                 DialogResult result = MessageBox.Show("Jeste li sigurni da želite izaći?", "Izlaz", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (result == DialogResult.Yes)
                 {
-                    this.Close();
+                    Application.Exit();
                 }
             }
         }

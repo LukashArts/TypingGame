@@ -36,6 +36,7 @@ namespace Typing_game.HELP
             }
         }
 
+
         /// <summary>
         /// Prebacuje jezik u engleski.
         /// </summary>
@@ -43,8 +44,7 @@ namespace Typing_game.HELP
         {
             eng = true;
 
-            frmHELP frm = new frmHELP(eng);
-            frm.Show();
+            CloseOneOpenAnother();
         }
 
         /// <summary>
@@ -53,6 +53,19 @@ namespace Typing_game.HELP
         private void btnCroatian_Click(object sender, EventArgs e)
         {
             eng = false;
+
+            CloseOneOpenAnother();
+        }
+
+        private void CloseOneOpenAnother()
+        {
+            MdiParent.Close();
+
+            frmHELP frm = new frmHELP(eng);
+            frm.Show();
+
+            frm.TopMost = true;
+            frm.Activate();
         }
     }
 }
