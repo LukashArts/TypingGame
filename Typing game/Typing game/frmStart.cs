@@ -287,10 +287,72 @@ namespace Typing_game
 
             textBox1.Text = iCPM.ToString();
             textBox2.Text = iWPM.ToString();
-                        
-            ScoreInput scoreInput = new ScoreInput(iCPM, iWPM, hrvat);
-            scoreInput.ShowDialog();
 
+            CheckForHighscore(iCPM, iWPM);
+        }
+
+        /// <summary>
+        /// Provjerava je li rezultat dovoljan za ući na listu.
+        /// </summary>
+        private void CheckForHighscore(int iCPM, int iWPM)
+        {
+            List<Highscore> sortedList = null;
+            BindingList<Highscore> list = null;
+            using (dbTypingGameEntities baza = new dbTypingGameEntities())
+            {
+                list = new BindingList<Highscore>(baza.Highscore.ToList());
+            }
+            sortedList = list.OrderByDescending(o => o.CPM).ToList();
+
+            List<Highscore> listEnglish = new List<Highscore>();
+            List<Highscore> listCroatian = new List<Highscore>();
+
+            foreach (Highscore item in sortedList)
+            {
+                if (item.language == hrvat)
+                {
+                    listCroatian.Add(item);
+                }
+                else
+                {
+                    listEnglish.Add(item);
+                }
+            }
+            if (hrvat)
+            {
+                if (listCroatian.Count < 10 || listCroatian[listCroatian.Count - 1].CPM < iCPM)
+                {
+                    ScoreInput scoreInput = new ScoreInput(iCPM, iWPM, hrvat);
+                    scoreInput.ShowDialog();
+
+                    ShowHighscore();
+                }
+                else
+                {
+                    ShowHighscore();
+                }
+            }
+            else
+            {
+                if (listEnglish.Count < 10 || listEnglish[listEnglish.Count - 1].CPM < iCPM)
+                {
+                    ScoreInput scoreInput = new ScoreInput(iCPM, iWPM, hrvat);
+                    scoreInput.ShowDialog();
+
+                    ShowHighscore();
+                }
+                else
+                {
+                    ShowHighscore();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Prikazuje tablicu s rezultatima.
+        /// </summary>
+        private void ShowHighscore()
+        {
             frmHighscore frm = new frmHighscore(hrvat);
             frm.ShowDialog();
         }

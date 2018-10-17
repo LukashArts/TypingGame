@@ -27,13 +27,9 @@ namespace Typing_game
         /// <param name="iWPM">Riječi po minuti.</param>
         public ScoreInput(int iCPM, int iWPM, bool hrvat)
         {
+            Hrv = hrvat;
             CPM = iCPM;
             WPM = iWPM;
-
-            if (hrvat == true)
-                Hrv = false;
-            else
-                Hrv = true;
 
             InitializeComponent();
         }
@@ -42,8 +38,7 @@ namespace Typing_game
         /// Gumb prilikom kojeg se usnimava rezultat.
         /// </summary>
         private void btnSave_Click(object sender, EventArgs e)
-        {    
-            
+        {                
             using(dbTypingGameEntities baza = new dbTypingGameEntities())
             {
                 Highscore highscore = new Highscore
@@ -64,6 +59,7 @@ namespace Typing_game
         /// </summary>
         private void ScoreInput_Load(object sender, EventArgs e)
         {
+            this.CenterToScreen();
             lbCPM.Text = CPM.ToString();
             lbWPM.Text = WPM.ToString();
         }

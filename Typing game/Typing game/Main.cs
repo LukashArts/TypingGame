@@ -95,7 +95,7 @@ namespace Typing_game
             }
         }
 
-        bool english = false;
+        bool english = true;
         /// <summary>
         /// Izvršava se tijekom otvaranja aplikacije odnosno forme.
         /// </summary>

@@ -68,7 +68,7 @@ namespace Typing_game
 
             foreach(Highscore score in SortedList)
             {
-                if (score.language == true)
+                if (score.language == false)
                     englishHighscore.Add(score);
             }
             if (englishHighscore.Count > 10)
@@ -108,7 +108,7 @@ namespace Typing_game
 
             foreach (Highscore score in SortedList)
             {
-                if (score.language == false)
+                if (score.language == true)
                     croatianHighscore.Add(score);
             }
             if (croatianHighscore.Count > 10)
